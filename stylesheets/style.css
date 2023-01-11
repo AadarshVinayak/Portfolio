@@ -1,29 +1,60 @@
-header {
-  background-color: #0e0e0e;
+body {
+  background-color: #2f3e46;
   color: white;
-  padding: 5px;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
-  text-align: right;
-  margin-bottom: 10px;
+  background-color: #2f3e46;
   position: fixed;
-  top: 87px;
-  width: 100%;
   z-index: 2;
+  padding-right: 10px;
+  width: 100%;
+  text-align: right;
+  margin-top: 0px;
+}
+
+header {
+  color: white;
+  position: fixed;
+  z-index: 2;
+  text-align: left;
+  font-family: "Segoe UI";
+  font-weight: 900;
+  font-size: 35px;
 }
 
 nav li {
-  display: inline-block;
-  width: 60px;
-  padding: 5px;
-  text-align: center;
+  display: inline;
+  margin-right: 30px;
+  color: white;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  padding: 8px;
+}
+
+#Overview {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.596);
+  background: linear-gradient(to right, #2f3e46ff, #2f3e4600),
+    url(../src/background.JPG) no-repeat top center;
+  height: 100vh;
+  color: rgba(255, 255, 255);
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#Overview h1 {
+  position: absolute;
+  top: 50%;
+  left: 10em;
+}
+
+#AboutMe {
+  position: flex;
 }
