@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="../JS/libraries/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../JS/libraries/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <script src="../JS/libraries/Jquery/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../JS/libraries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="/scripts/test..js"></script>
   </head>
   <body>
-    <nav>
-      <header>Aadarsh Vinayak</header>
-      <ul>
-        <li>Home</li>
-        <li>About Me</li>
-        <li>Coding Projects</li>
-        <li>UX Projects</li>
-        <li>Drone Photos</li>
-        <li>Contact Me</li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>
+          This is where you can write a little bit about yourself and your
+          skills.
+        </p>
+      </section>
+      <section id="projects">
+        <h1>My Projects</h1>
+        <div class="card-container">
+          <div class="card">
+            <img src="project1.jpg" alt="Project 1" />
+            <h2>Project 1</h2>
+            <p>A brief description of the project goes here.</p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="card">
+            <img src="project2.jpg" alt="Project 2" />
+            <h2>Project 2</h2>
+            <p>A brief description of the project goes here.</p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="card">
+            <img src="project3.jpg" alt="Project 3" />
+            <h2>Project 3</h2>
+            <p>A brief description of the project goes here.</p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+      </section>
 
-    <section id="Overview">
-      <h1>Hi There! Im Aadarsh Vinayak</h1>
-      <div id="animatedTitles"></div>
-    </section>
+      <section id="photos">
+        <h1>My Photos</h1>
+        <div class="carousel">
+          <img src="photo1.jpg" alt="Photo 1" />
+          <img src="photo2.jpg" alt="Photo 2" />
+          <img src="photo3.jpg" alt="Photo 3" />
+        </div>
+      </section>
 
-    <section id="AboutMe">
-      <h1>Let Me Introduce Myself</h1>
-      <p>
-        I fell in love with programming and I have at least learnt something, I
-        think… 🤷‍♂️ I am fluent in classics like C++, Javascript and Python. My
-        field of Interest's are building new Web Technologies and Products and
-        also in areas related to Deep Learning and Natural Launguage Processing.
-        Whenever possible, I also apply my passion for developing products with
-        Node.js and Modern Javascript Library and Frameworks like React.js and
-        Next.js
-      </p>
-      <h2>FIND ME ON</h2>
-      <p>Feel free to connect with me!</p>
-      <ul>
-        <li>GitHub</li>
-        <li>Insta</li>
-        <li>Linked in</li>
-        <li>Twitter</li>
-      </ul>
-    </section>
-    <section id="CodingProjects"></section>
-    <section id="UXProjects"></section>
-    <section id="DronePhotos"></section>
-    <section id="ContactMe"></section>
-    <footer></footer>
+      <section id="contact">
+        <h1>Contact Me</h1>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2021 My Portfolio</p>
+    </footer>
   </body>
 </html>
