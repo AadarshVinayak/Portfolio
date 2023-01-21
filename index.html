@@ -2,18 +2,23 @@
 <html>
   <head>
     <title>My Portfolio</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+    <script src="/scripts/test.js"></script>
+
     <link
       rel="stylesheet"
-      href="../JS/libraries/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+      href="/libraries/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="../JS/libraries/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+      href="/libraries/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     />
-    <script src="../JS/libraries/Jquery/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../JS/libraries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="/scripts/test..js"></script>
+    <script src="/libraries/Jquery/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/libraries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
   </head>
   <body>
     <header>
@@ -58,9 +63,15 @@
       <section id="photos">
         <h1>My Photos</h1>
         <div class="carousel">
-          <img src="photo1.jpg" alt="Photo 1" />
-          <img src="photo2.jpg" alt="Photo 2" />
-          <img src="photo3.jpg" alt="Photo 3" />
+          <div class="photo-container" id="photo1">
+            <img src="src/photo1.jpg" />
+          </div>
+          <div class="photo-container" id="photo1">
+            <img src="src/photo2.jpg" />
+          </div>
+          <div class="photo-container" id="photo1">
+            <img src="src/photo3.jpg" />
+          </div>
         </div>
       </section>
 
