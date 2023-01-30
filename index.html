@@ -2,13 +2,7 @@
 <html>
   <head>
     <title>My Portfolio</title>
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.7.1.min.js"
-    ></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
-    <script src="/scripts/test.js"></script>
-
     <link
       rel="stylesheet"
       href="/libraries/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
@@ -17,10 +11,14 @@
       rel="stylesheet"
       href="/libraries/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     />
-    <script src="/libraries/Jquery/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/libraries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/swiper.css" />
   </head>
   <body>
+    <!--<script src="/libraries/Jquery/node_modules/jquery/dist/jquery.min.js"></script>-->
     <header>
       <nav>
         <a href="#about">About</a>
@@ -31,6 +29,7 @@
     <main>
       <section id="about">
         <h1>About Me</h1>
+        <img src="project2.jpg" alt="Project 2" />
         <p>
           This is where you can write a little bit about yourself and your
           skills.
@@ -60,20 +59,57 @@
         </div>
       </section>
 
-      <section id="photos">
+      <!--    
+        <script src="/libraries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script> 
+        <section id="photos">
         <h1>My Photos</h1>
         <div class="carousel">
-          <div class="photo-container" id="photo1">
-            <img src="src/photo1.jpg" />
-          </div>
-          <div class="photo-container" id="photo1">
-            <img src="src/photo2.jpg" />
-          </div>
-          <div class="photo-container" id="photo1">
-            <img src="src/photo3.jpg" />
-          </div>
+          <div class="photo-container"></div>
+          <div class="photo-container"></div>
+          <div class="photo-container"></div>
         </div>
       </section>
+            -->
+
+      <section id="UX">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <!-- Add Pagination  -->
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <script type="module">
+        import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+        var mySwiper = new Swiper(".swiper-container", {
+          // Optional parameters
+          direction: "horizontal",
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+        });
+      </script>
 
       <section id="contact">
         <h1>Contact Me</h1>
@@ -95,7 +131,12 @@
       </section>
     </main>
     <footer>
-      <p>Copyright © 2021 My Portfolio</p>
+      <p>Copyright © 2022 My Portfolio</p>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    <script src="/scripts/test.js"></script>
   </body>
 </html>

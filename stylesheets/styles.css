@@ -1,12 +1,5 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 10;
-  background-color: #2f3e46;
-}
-
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,14 +7,27 @@ header {
   z-index: 999;
 }
 
-a:hover {
-  color: #cad2c5;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 header nav a {
   color: #cad2c5;
   text-decoration: none;
-  margin-right: 10px;
+  padding: 1rem;
+}
+
+a:hover {
+  color: #cad2c5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10;
+  background-color: #2f3e46;
 }
 
 main {
@@ -30,6 +36,7 @@ main {
 
 section h1 {
   margin-top: 0;
+  text-align: center;
 }
 
 footer {
@@ -44,6 +51,13 @@ body,
 header,
 footer {
   color: #84a98c;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 .card-container {
@@ -85,10 +99,32 @@ footer {
   text-decoration: none;
 }
 
-img {
-  content: attr(alt);
-  color: #cad2c5;
-  display: block;
+#projects {
+  margin-bottom: 100px;
+}
+
+#photos {
+  text-align: center;
+  padding: 20px;
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.photo-container img {
+  width: 100px;
+  margin: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#UX {
+  display: flex;
 }
 
 form {
@@ -102,7 +138,7 @@ form {
 
 label {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #cad2c5;
 }
 
 input,
@@ -139,51 +175,4 @@ textarea:focus {
 
 .btn:hover {
   background-color: #354f52;
-}
-
-h1 {
-  text-align: center;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #354f52;
-  z-index: 999;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-nav a {
-  color: #cad2c5;
-  text-decoration: none;
-  padding: 1rem;
-}
-
-#about {
-  margin-top: 60px;
-  padding: 20px;
-}
-
-#photos {
-  text-align: center;
-  padding: 20px;
-}
-
-.photo-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.photo-container img {
-  width: 300px;
-  margin: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }

@@ -1,9 +1,30 @@
+import Swiper, {
+  Navigation,
+  Pagination,
+} from "htts://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+Swiper.use([Navigation, Pagination]);
+
 $(document).ready(function () {
-  $(".carousel").owlCarousel({
-    items: 3,
+  var mySwiper = $(".swiper-container").swiper({
+    mode: "horizontal",
+    watchActiveIndex: true,
     loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
+    onSlideChangeStart: function (swiper) {
+      console.log("slide change start - before");
+      console.log(swiper);
+      console.log(swiper.activeIndex);
+      //before Event use it for your purpose
+    },
+    onSlideChangeEnd: function (swiper) {
+      console.log("slide change end - after");
+      console.log(swiper);
+      console.log(swiper.activeIndex);
+      //after Event use it for your purpose
+      if (swiper.activeIndex == 1) {
+        //First Slide is active
+        console.log("First slide active");
+      }
+    },
   });
 });
